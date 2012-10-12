@@ -717,6 +717,8 @@
 				<onback>50</onback>
 				<onclick>XBMC.PlayerControl(Rewind)</onclick>
 				<visible>Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo</visible>
+                                <enable>Player.CanSeek</enable>
+                                <animation effect="fade" start="100" end="30" time="100" condition="!Player.CanSeek">Conditional</animation>
 			</control>
 			<control type="group">
 				<animation effect="slide" start="0,0" end="40,0" time="0" condition="Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo">Conditional</animation>
@@ -769,6 +771,8 @@
 					<onback>50</onback>
 					<onclick>XBMC.PlayerControl(Forward)</onclick>
 					<visible>Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo</visible>
+                                        <enable>Player.CanSeek</enable>
+                                        <animation effect="fade" start="100" end="30" time="100" condition="!Player.CanSeek">Conditional</animation>
 				</control>
 				<control type="button" id="602">
 					<posx>125</posx>

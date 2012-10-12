@@ -546,6 +546,8 @@
 						<onup>9003</onup>
 						<ondown>9000</ondown>
 						<onclick>XBMC.PlayerControl(Rewind)</onclick>
+                                                <enable>Player.CanSeek</enable>
+                                                <animation effect="fade" start="100" end="30" time="100" condition="!Player.CanSeek">Conditional</animation>
 					</control>
 					<control type="togglebutton" id="603">
 						<posx>70</posx>
@@ -592,6 +594,8 @@
 						<onup>9003</onup>
 						<ondown>9000</ondown>
 						<onclick>XBMC.PlayerControl(Forward)</onclick>
+                                                <enable>Player.CanSeek</enable>
+                                                <animation effect="fade" start="100" end="30" time="100" condition="!Player.CanSeek">Conditional</animation>
 					</control>
 					<control type="button" id="606">
 						<posx>160</posx>

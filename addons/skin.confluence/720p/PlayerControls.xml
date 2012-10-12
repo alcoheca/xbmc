@@ -48,6 +48,8 @@
 				<onup>300</onup>
 				<ondown>200</ondown>
 				<onclick>XBMC.PlayerControl(Rewind)</onclick>
+				<enable>Player.CanSeek</enable>
+				<animation effect="fade" start="100" end="30" time="100" condition="!Player.CanSeek">Conditional</animation>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="togglebutton" id="603">
@@ -97,6 +99,8 @@
 				<onup>300</onup>
 				<ondown>200</ondown>
 				<onclick>XBMC.PlayerControl(Forward)</onclick>
+				<enable>Player.CanSeek</enable>
+				<animation effect="fade" start="100" end="30" time="100" condition="!Player.CanSeek">Conditional</animation>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="605">
