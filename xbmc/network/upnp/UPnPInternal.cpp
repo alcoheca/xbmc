@@ -349,7 +349,7 @@ BuildObject(CFileItem&                    item,
 
     if (!item.m_bIsFolder) {
         object = new PLT_MediaItem();
-        object->m_ObjectID = item.GetPath();
+        object->m_ObjectID = StringUtils::Left(item.GetPath(), item.GetPath().find('?')).c_str();
 
         /* Setup object type */
         if (item.IsMusicDb() || item.IsAudio()) {
@@ -422,7 +422,7 @@ BuildObject(CFileItem&                    item,
         object = container;
 
         /* Assign a title and id for this container */
-        container->m_ObjectID = item.GetPath();
+        container->m_ObjectID = StringUtils::Left(item.GetPath(), item.GetPath().find('?')).c_str();
         container->m_ObjectClass.type = "object.container";
         container->m_ChildrenCount = -1;
 
