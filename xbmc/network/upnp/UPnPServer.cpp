@@ -728,10 +728,10 @@ CUPnPServer::BuildResponse(PLT_ActionReference&          action,
         thumb_loader->Initialize();
     }
 
-    // this isn't pretty but needed to properly hide the addons node from clients
+    // this isn't pretty but needed to properly hide the addon & source nodes from clients
     if (items.GetPath().Left(7) == "library") {
         for (int i=0; i<items.Size(); i++) {
-            if (items[i]->GetPath().Left(6) == "addons")
+            if (items[i]->GetPath().Left(6) == "addons" || items[i]->GetPath().Left(7) == "sources")
                 items.Remove(i);
         }
     }
